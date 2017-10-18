@@ -47,6 +47,7 @@ class provinceNameViewController: UIViewController, UITableViewDataSource, UITab
         
         print("tap button")
         let searchedProvinceViewController = self.storyboard!.instantiateViewController(withIdentifier: "searchedProvinceViewController") as! searchedProvinceViewController
+        searchedProvinceViewController.chinaAddress = chinaAddress
         
         self.navigationController?.pushViewController(searchedProvinceViewController, animated: true)
     }
