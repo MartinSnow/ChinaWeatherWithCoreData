@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D8089C531F9745DE0072FE86 /* SearchedProvinceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8089C521F9745DE0072FE86 /* SearchedProvinceViewController.swift */; };
 		D812180B1F96D29400C52B99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D812180A1F96D29400C52B99 /* AppDelegate.swift */; };
-		D812180D1F96D29400C52B99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D812180C1F96D29400C52B99 /* ViewController.swift */; };
 		D81218101F96D29400C52B99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D812180E1F96D29400C52B99 /* Main.storyboard */; };
 		D81218131F96D29400C52B99 /* ChinaWeatherWithCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D81218111F96D29400C52B99 /* ChinaWeatherWithCoreData.xcdatamodeld */; };
 		D81218151F96D29400C52B99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D81218141F96D29400C52B99 /* Assets.xcassets */; };
@@ -80,7 +79,6 @@
 		D8089C521F9745DE0072FE86 /* SearchedProvinceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchedProvinceViewController.swift; sourceTree = "<group>"; };
 		D81218071F96D29400C52B99 /* ChinaWeatherWithCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChinaWeatherWithCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D812180A1F96D29400C52B99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D812180C1F96D29400C52B99 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D812180F1F96D29400C52B99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D81218121F96D29400C52B99 /* ChinaWeatherWithCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChinaWeatherWithCoreData.xcdatamodel; sourceTree = "<group>"; };
 		D81218141F96D29400C52B99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -160,6 +158,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D8089C581F9788090072FE86 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D81218111F96D29400C52B99 /* ChinaWeatherWithCoreData.xcdatamodeld */,
+				D81218401F96D31B00C52B99 /* Region */,
+				D812183B1F96D2AE00C52B99 /* Weather */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		D81217FE1F96D29400C52B99 = {
 			isa = PBXGroup;
 			children = (
@@ -183,17 +191,14 @@
 		D81218091F96D29400C52B99 /* ChinaWeatherWithCoreData */ = {
 			isa = PBXGroup;
 			children = (
+				D8089C581F9788090072FE86 /* Model */,
 				D812184C1F96D47A00C52B99 /* Assistant */,
 				D81218451F96D3D900C52B99 /* Controller */,
-				D81218401F96D31B00C52B99 /* Region */,
-				D812183B1F96D2AE00C52B99 /* Weather */,
 				D812180A1F96D29400C52B99 /* AppDelegate.swift */,
-				D812180C1F96D29400C52B99 /* ViewController.swift */,
 				D812180E1F96D29400C52B99 /* Main.storyboard */,
 				D81218141F96D29400C52B99 /* Assets.xcassets */,
 				D81218161F96D29400C52B99 /* LaunchScreen.storyboard */,
 				D81218191F96D29400C52B99 /* Info.plist */,
-				D81218111F96D29400C52B99 /* ChinaWeatherWithCoreData.xcdatamodeld */,
 			);
 			path = ChinaWeatherWithCoreData;
 			sourceTree = "<group>";
@@ -464,7 +469,6 @@
 				D8089C531F9745DE0072FE86 /* SearchedProvinceViewController.swift in Sources */,
 				D81218131F96D29400C52B99 /* ChinaWeatherWithCoreData.xcdatamodeld in Sources */,
 				D812183F1F96D2FE00C52B99 /* WeatherClient.swift in Sources */,
-				D812180D1F96D29400C52B99 /* ViewController.swift in Sources */,
 				D81218471F96D3ED00C52B99 /* ProvinceNameViewController.swift in Sources */,
 				D812180B1F96D29400C52B99 /* AppDelegate.swift in Sources */,
 				D81218421F96D3AF00C52B99 /* Province.swift in Sources */,

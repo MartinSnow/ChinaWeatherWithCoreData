@@ -140,7 +140,7 @@ extension cityNameViewController {
         WeatherClient.sharedInstance.getWeatherData(lat: lat, lon: lon){ (weatherData, error) in
             
             if error != nil {
-                print("There is an error")
+                self.alert(message: "Can't get weather data")
                 return
             }
             DispatchQueue.main.async{
@@ -160,4 +160,12 @@ extension cityNameViewController {
             
         }
     }
+    
+    func alert(message: String){
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.destructive, handler: nil)
+        alert.addAction(cancelAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
 }
