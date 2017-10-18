@@ -15,6 +15,47 @@
 		D81218181F96D29400C52B99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D81218161F96D29400C52B99 /* LaunchScreen.storyboard */; };
 		D81218231F96D29400C52B99 /* ChinaWeatherWithCoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81218221F96D29400C52B99 /* ChinaWeatherWithCoreDataTests.swift */; };
 		D812182E1F96D29400C52B99 /* ChinaWeatherWithCoreDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D812182D1F96D29400C52B99 /* ChinaWeatherWithCoreDataUITests.swift */; };
+		D812183F1F96D2FE00C52B99 /* WeatherClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D812183E1F96D2FE00C52B99 /* WeatherClient.swift */; };
+		D81218421F96D3AF00C52B99 /* Province.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81218411F96D3AF00C52B99 /* Province.swift */; };
+		D81218441F96D3C700C52B99 /* ChinaAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81218431F96D3C700C52B99 /* ChinaAddress.swift */; };
+		D81218471F96D3ED00C52B99 /* ProvinceNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81218461F96D3ED00C52B99 /* ProvinceNameViewController.swift */; };
+		D81218491F96D41600C52B99 /* CityNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81218481F96D41600C52B99 /* CityNameViewController.swift */; };
+		D812184B1F96D45800C52B99 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D812184A1F96D45800C52B99 /* WeatherViewController.swift */; };
+		D812184E1F970CFA00C52B99 /* address.plist in Resources */ = {isa = PBXBuildFile; fileRef = D812184D1F970CFA00C52B99 /* address.plist */; };
+		D81218711F970D4D00C52B99 /* 安徽省.json in Resources */ = {isa = PBXBuildFile; fileRef = D812184F1F970D4D00C52B99 /* 安徽省.json */; };
+		D81218721F970D4D00C52B99 /* 澳门特别行政区.json in Resources */ = {isa = PBXBuildFile; fileRef = D81218501F970D4D00C52B99 /* 澳门特别行政区.json */; };
+		D81218731F970D4D00C52B99 /* 北京.json in Resources */ = {isa = PBXBuildFile; fileRef = D81218511F970D4D00C52B99 /* 北京.json */; };
+		D81218741F970D4D00C52B99 /* 重庆.json in Resources */ = {isa = PBXBuildFile; fileRef = D81218521F970D4D00C52B99 /* 重庆.json */; };
+		D81218751F970D4D00C52B99 /* 福建省.json in Resources */ = {isa = PBXBuildFile; fileRef = D81218531F970D4D00C52B99 /* 福建省.json */; };
+		D81218761F970D4D00C52B99 /* 甘肃省.json in Resources */ = {isa = PBXBuildFile; fileRef = D81218541F970D4D00C52B99 /* 甘肃省.json */; };
+		D81218771F970D4D00C52B99 /* 广东省.json in Resources */ = {isa = PBXBuildFile; fileRef = D81218551F970D4D00C52B99 /* 广东省.json */; };
+		D81218781F970D4D00C52B99 /* 广西壮族自治区.json in Resources */ = {isa = PBXBuildFile; fileRef = D81218561F970D4D00C52B99 /* 广西壮族自治区.json */; };
+		D81218791F970D4D00C52B99 /* 贵州省.json in Resources */ = {isa = PBXBuildFile; fileRef = D81218571F970D4D00C52B99 /* 贵州省.json */; };
+		D812187A1F970D4D00C52B99 /* 海南省.json in Resources */ = {isa = PBXBuildFile; fileRef = D81218581F970D4D00C52B99 /* 海南省.json */; };
+		D812187B1F970D4D00C52B99 /* 河北省.json in Resources */ = {isa = PBXBuildFile; fileRef = D81218591F970D4D00C52B99 /* 河北省.json */; };
+		D812187C1F970D4D00C52B99 /* 河南省.json in Resources */ = {isa = PBXBuildFile; fileRef = D812185A1F970D4D00C52B99 /* 河南省.json */; };
+		D812187D1F970D4D00C52B99 /* 黑龙江省.json in Resources */ = {isa = PBXBuildFile; fileRef = D812185B1F970D4D00C52B99 /* 黑龙江省.json */; };
+		D812187E1F970D4D00C52B99 /* 湖北省.json in Resources */ = {isa = PBXBuildFile; fileRef = D812185C1F970D4D00C52B99 /* 湖北省.json */; };
+		D812187F1F970D4D00C52B99 /* 湖南省.json in Resources */ = {isa = PBXBuildFile; fileRef = D812185D1F970D4D00C52B99 /* 湖南省.json */; };
+		D81218801F970D4D00C52B99 /* 吉林省.json in Resources */ = {isa = PBXBuildFile; fileRef = D812185E1F970D4D00C52B99 /* 吉林省.json */; };
+		D81218811F970D4D00C52B99 /* 江苏省.json in Resources */ = {isa = PBXBuildFile; fileRef = D812185F1F970D4D00C52B99 /* 江苏省.json */; };
+		D81218821F970D4D00C52B99 /* 江西省.json in Resources */ = {isa = PBXBuildFile; fileRef = D81218601F970D4D00C52B99 /* 江西省.json */; };
+		D81218831F970D4D00C52B99 /* 辽宁省.json in Resources */ = {isa = PBXBuildFile; fileRef = D81218611F970D4D00C52B99 /* 辽宁省.json */; };
+		D81218841F970D4D00C52B99 /* 内蒙古自治区.json in Resources */ = {isa = PBXBuildFile; fileRef = D81218621F970D4D00C52B99 /* 内蒙古自治区.json */; };
+		D81218851F970D4D00C52B99 /* 宁夏回族自治区.json in Resources */ = {isa = PBXBuildFile; fileRef = D81218631F970D4D00C52B99 /* 宁夏回族自治区.json */; };
+		D81218861F970D4D00C52B99 /* 青海省.json in Resources */ = {isa = PBXBuildFile; fileRef = D81218641F970D4D00C52B99 /* 青海省.json */; };
+		D81218871F970D4D00C52B99 /* 山东省.json in Resources */ = {isa = PBXBuildFile; fileRef = D81218651F970D4D00C52B99 /* 山东省.json */; };
+		D81218881F970D4D00C52B99 /* 山西省.json in Resources */ = {isa = PBXBuildFile; fileRef = D81218661F970D4D00C52B99 /* 山西省.json */; };
+		D81218891F970D4D00C52B99 /* 陕西省.json in Resources */ = {isa = PBXBuildFile; fileRef = D81218671F970D4D00C52B99 /* 陕西省.json */; };
+		D812188A1F970D4D00C52B99 /* 上海.json in Resources */ = {isa = PBXBuildFile; fileRef = D81218681F970D4D00C52B99 /* 上海.json */; };
+		D812188B1F970D4D00C52B99 /* 四川省.json in Resources */ = {isa = PBXBuildFile; fileRef = D81218691F970D4D00C52B99 /* 四川省.json */; };
+		D812188C1F970D4D00C52B99 /* 台湾.json in Resources */ = {isa = PBXBuildFile; fileRef = D812186A1F970D4D00C52B99 /* 台湾.json */; };
+		D812188D1F970D4D00C52B99 /* 天津.json in Resources */ = {isa = PBXBuildFile; fileRef = D812186B1F970D4D00C52B99 /* 天津.json */; };
+		D812188E1F970D4D00C52B99 /* 西藏自治区.json in Resources */ = {isa = PBXBuildFile; fileRef = D812186C1F970D4D00C52B99 /* 西藏自治区.json */; };
+		D812188F1F970D4D00C52B99 /* 香港特别行政区.json in Resources */ = {isa = PBXBuildFile; fileRef = D812186D1F970D4D00C52B99 /* 香港特别行政区.json */; };
+		D81218901F970D4D00C52B99 /* 新疆维吾尔自治区.json in Resources */ = {isa = PBXBuildFile; fileRef = D812186E1F970D4D00C52B99 /* 新疆维吾尔自治区.json */; };
+		D81218911F970D4D00C52B99 /* 云南省.json in Resources */ = {isa = PBXBuildFile; fileRef = D812186F1F970D4D00C52B99 /* 云南省.json */; };
+		D81218921F970D4D00C52B99 /* 浙江省.json in Resources */ = {isa = PBXBuildFile; fileRef = D81218701F970D4D00C52B99 /* 浙江省.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +90,47 @@
 		D81218291F96D29400C52B99 /* ChinaWeatherWithCoreDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChinaWeatherWithCoreDataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D812182D1F96D29400C52B99 /* ChinaWeatherWithCoreDataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChinaWeatherWithCoreDataUITests.swift; sourceTree = "<group>"; };
 		D812182F1F96D29400C52B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D812183E1F96D2FE00C52B99 /* WeatherClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherClient.swift; sourceTree = "<group>"; };
+		D81218411F96D3AF00C52B99 /* Province.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Province.swift; sourceTree = "<group>"; };
+		D81218431F96D3C700C52B99 /* ChinaAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChinaAddress.swift; sourceTree = "<group>"; };
+		D81218461F96D3ED00C52B99 /* ProvinceNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProvinceNameViewController.swift; sourceTree = "<group>"; };
+		D81218481F96D41600C52B99 /* CityNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityNameViewController.swift; sourceTree = "<group>"; };
+		D812184A1F96D45800C52B99 /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		D812184D1F970CFA00C52B99 /* address.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = address.plist; sourceTree = "<group>"; };
+		D812184F1F970D4D00C52B99 /* 安徽省.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "安徽省.json"; sourceTree = "<group>"; };
+		D81218501F970D4D00C52B99 /* 澳门特别行政区.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "澳门特别行政区.json"; sourceTree = "<group>"; };
+		D81218511F970D4D00C52B99 /* 北京.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "北京.json"; sourceTree = "<group>"; };
+		D81218521F970D4D00C52B99 /* 重庆.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "重庆.json"; sourceTree = "<group>"; };
+		D81218531F970D4D00C52B99 /* 福建省.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "福建省.json"; sourceTree = "<group>"; };
+		D81218541F970D4D00C52B99 /* 甘肃省.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "甘肃省.json"; sourceTree = "<group>"; };
+		D81218551F970D4D00C52B99 /* 广东省.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "广东省.json"; sourceTree = "<group>"; };
+		D81218561F970D4D00C52B99 /* 广西壮族自治区.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "广西壮族自治区.json"; sourceTree = "<group>"; };
+		D81218571F970D4D00C52B99 /* 贵州省.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "贵州省.json"; sourceTree = "<group>"; };
+		D81218581F970D4D00C52B99 /* 海南省.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "海南省.json"; sourceTree = "<group>"; };
+		D81218591F970D4D00C52B99 /* 河北省.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "河北省.json"; sourceTree = "<group>"; };
+		D812185A1F970D4D00C52B99 /* 河南省.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "河南省.json"; sourceTree = "<group>"; };
+		D812185B1F970D4D00C52B99 /* 黑龙江省.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "黑龙江省.json"; sourceTree = "<group>"; };
+		D812185C1F970D4D00C52B99 /* 湖北省.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "湖北省.json"; sourceTree = "<group>"; };
+		D812185D1F970D4D00C52B99 /* 湖南省.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "湖南省.json"; sourceTree = "<group>"; };
+		D812185E1F970D4D00C52B99 /* 吉林省.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "吉林省.json"; sourceTree = "<group>"; };
+		D812185F1F970D4D00C52B99 /* 江苏省.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "江苏省.json"; sourceTree = "<group>"; };
+		D81218601F970D4D00C52B99 /* 江西省.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "江西省.json"; sourceTree = "<group>"; };
+		D81218611F970D4D00C52B99 /* 辽宁省.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "辽宁省.json"; sourceTree = "<group>"; };
+		D81218621F970D4D00C52B99 /* 内蒙古自治区.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "内蒙古自治区.json"; sourceTree = "<group>"; };
+		D81218631F970D4D00C52B99 /* 宁夏回族自治区.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "宁夏回族自治区.json"; sourceTree = "<group>"; };
+		D81218641F970D4D00C52B99 /* 青海省.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "青海省.json"; sourceTree = "<group>"; };
+		D81218651F970D4D00C52B99 /* 山东省.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "山东省.json"; sourceTree = "<group>"; };
+		D81218661F970D4D00C52B99 /* 山西省.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "山西省.json"; sourceTree = "<group>"; };
+		D81218671F970D4D00C52B99 /* 陕西省.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "陕西省.json"; sourceTree = "<group>"; };
+		D81218681F970D4D00C52B99 /* 上海.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "上海.json"; sourceTree = "<group>"; };
+		D81218691F970D4D00C52B99 /* 四川省.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "四川省.json"; sourceTree = "<group>"; };
+		D812186A1F970D4D00C52B99 /* 台湾.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "台湾.json"; sourceTree = "<group>"; };
+		D812186B1F970D4D00C52B99 /* 天津.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "天津.json"; sourceTree = "<group>"; };
+		D812186C1F970D4D00C52B99 /* 西藏自治区.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "西藏自治区.json"; sourceTree = "<group>"; };
+		D812186D1F970D4D00C52B99 /* 香港特别行政区.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "香港特别行政区.json"; sourceTree = "<group>"; };
+		D812186E1F970D4D00C52B99 /* 新疆维吾尔自治区.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "新疆维吾尔自治区.json"; sourceTree = "<group>"; };
+		D812186F1F970D4D00C52B99 /* 云南省.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "云南省.json"; sourceTree = "<group>"; };
+		D81218701F970D4D00C52B99 /* 浙江省.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "浙江省.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +181,10 @@
 		D81218091F96D29400C52B99 /* ChinaWeatherWithCoreData */ = {
 			isa = PBXGroup;
 			children = (
+				D812184C1F96D47A00C52B99 /* Assistant */,
+				D81218451F96D3D900C52B99 /* Controller */,
+				D81218401F96D31B00C52B99 /* Region */,
+				D812183B1F96D2AE00C52B99 /* Weather */,
 				D812180A1F96D29400C52B99 /* AppDelegate.swift */,
 				D812180C1F96D29400C52B99 /* ViewController.swift */,
 				D812180E1F96D29400C52B99 /* Main.storyboard */,
@@ -126,6 +212,75 @@
 				D812182F1F96D29400C52B99 /* Info.plist */,
 			);
 			path = ChinaWeatherWithCoreDataUITests;
+			sourceTree = "<group>";
+		};
+		D812183B1F96D2AE00C52B99 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				D812183E1F96D2FE00C52B99 /* WeatherClient.swift */,
+			);
+			name = Weather;
+			sourceTree = "<group>";
+		};
+		D81218401F96D31B00C52B99 /* Region */ = {
+			isa = PBXGroup;
+			children = (
+				D81218411F96D3AF00C52B99 /* Province.swift */,
+				D81218431F96D3C700C52B99 /* ChinaAddress.swift */,
+			);
+			name = Region;
+			sourceTree = "<group>";
+		};
+		D81218451F96D3D900C52B99 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D81218461F96D3ED00C52B99 /* ProvinceNameViewController.swift */,
+				D81218481F96D41600C52B99 /* CityNameViewController.swift */,
+				D812184A1F96D45800C52B99 /* WeatherViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D812184C1F96D47A00C52B99 /* Assistant */ = {
+			isa = PBXGroup;
+			children = (
+				D812184D1F970CFA00C52B99 /* address.plist */,
+				D812184F1F970D4D00C52B99 /* 安徽省.json */,
+				D81218501F970D4D00C52B99 /* 澳门特别行政区.json */,
+				D81218511F970D4D00C52B99 /* 北京.json */,
+				D81218521F970D4D00C52B99 /* 重庆.json */,
+				D81218531F970D4D00C52B99 /* 福建省.json */,
+				D81218541F970D4D00C52B99 /* 甘肃省.json */,
+				D81218551F970D4D00C52B99 /* 广东省.json */,
+				D81218561F970D4D00C52B99 /* 广西壮族自治区.json */,
+				D81218571F970D4D00C52B99 /* 贵州省.json */,
+				D81218581F970D4D00C52B99 /* 海南省.json */,
+				D81218591F970D4D00C52B99 /* 河北省.json */,
+				D812185A1F970D4D00C52B99 /* 河南省.json */,
+				D812185B1F970D4D00C52B99 /* 黑龙江省.json */,
+				D812185C1F970D4D00C52B99 /* 湖北省.json */,
+				D812185D1F970D4D00C52B99 /* 湖南省.json */,
+				D812185E1F970D4D00C52B99 /* 吉林省.json */,
+				D812185F1F970D4D00C52B99 /* 江苏省.json */,
+				D81218601F970D4D00C52B99 /* 江西省.json */,
+				D81218611F970D4D00C52B99 /* 辽宁省.json */,
+				D81218621F970D4D00C52B99 /* 内蒙古自治区.json */,
+				D81218631F970D4D00C52B99 /* 宁夏回族自治区.json */,
+				D81218641F970D4D00C52B99 /* 青海省.json */,
+				D81218651F970D4D00C52B99 /* 山东省.json */,
+				D81218661F970D4D00C52B99 /* 山西省.json */,
+				D81218671F970D4D00C52B99 /* 陕西省.json */,
+				D81218681F970D4D00C52B99 /* 上海.json */,
+				D81218691F970D4D00C52B99 /* 四川省.json */,
+				D812186A1F970D4D00C52B99 /* 台湾.json */,
+				D812186B1F970D4D00C52B99 /* 天津.json */,
+				D812186C1F970D4D00C52B99 /* 西藏自治区.json */,
+				D812186D1F970D4D00C52B99 /* 香港特别行政区.json */,
+				D812186E1F970D4D00C52B99 /* 新疆维吾尔自治区.json */,
+				D812186F1F970D4D00C52B99 /* 云南省.json */,
+				D81218701F970D4D00C52B99 /* 浙江省.json */,
+			);
+			name = Assistant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,9 +393,44 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D812188A1F970D4D00C52B99 /* 上海.json in Resources */,
+				D812188B1F970D4D00C52B99 /* 四川省.json in Resources */,
+				D81218791F970D4D00C52B99 /* 贵州省.json in Resources */,
+				D81218881F970D4D00C52B99 /* 山西省.json in Resources */,
 				D81218181F96D29400C52B99 /* LaunchScreen.storyboard in Resources */,
+				D81218751F970D4D00C52B99 /* 福建省.json in Resources */,
+				D81218911F970D4D00C52B99 /* 云南省.json in Resources */,
+				D81218711F970D4D00C52B99 /* 安徽省.json in Resources */,
+				D81218841F970D4D00C52B99 /* 内蒙古自治区.json in Resources */,
+				D81218901F970D4D00C52B99 /* 新疆维吾尔自治区.json in Resources */,
+				D81218741F970D4D00C52B99 /* 重庆.json in Resources */,
+				D812188D1F970D4D00C52B99 /* 天津.json in Resources */,
+				D81218831F970D4D00C52B99 /* 辽宁省.json in Resources */,
+				D812187B1F970D4D00C52B99 /* 河北省.json in Resources */,
+				D812187E1F970D4D00C52B99 /* 湖北省.json in Resources */,
+				D81218771F970D4D00C52B99 /* 广东省.json in Resources */,
+				D81218861F970D4D00C52B99 /* 青海省.json in Resources */,
+				D81218721F970D4D00C52B99 /* 澳门特别行政区.json in Resources */,
+				D81218781F970D4D00C52B99 /* 广西壮族自治区.json in Resources */,
+				D812188F1F970D4D00C52B99 /* 香港特别行政区.json in Resources */,
+				D812184E1F970CFA00C52B99 /* address.plist in Resources */,
+				D81218761F970D4D00C52B99 /* 甘肃省.json in Resources */,
+				D812187F1F970D4D00C52B99 /* 湖南省.json in Resources */,
+				D81218851F970D4D00C52B99 /* 宁夏回族自治区.json in Resources */,
+				D81218801F970D4D00C52B99 /* 吉林省.json in Resources */,
+				D812187C1F970D4D00C52B99 /* 河南省.json in Resources */,
+				D81218731F970D4D00C52B99 /* 北京.json in Resources */,
+				D812187D1F970D4D00C52B99 /* 黑龙江省.json in Resources */,
+				D81218891F970D4D00C52B99 /* 陕西省.json in Resources */,
 				D81218151F96D29400C52B99 /* Assets.xcassets in Resources */,
+				D81218871F970D4D00C52B99 /* 山东省.json in Resources */,
+				D81218921F970D4D00C52B99 /* 浙江省.json in Resources */,
 				D81218101F96D29400C52B99 /* Main.storyboard in Resources */,
+				D81218821F970D4D00C52B99 /* 江西省.json in Resources */,
+				D812188C1F970D4D00C52B99 /* 台湾.json in Resources */,
+				D812187A1F970D4D00C52B99 /* 海南省.json in Resources */,
+				D81218811F970D4D00C52B99 /* 江苏省.json in Resources */,
+				D812188E1F970D4D00C52B99 /* 西藏自治区.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,9 +455,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D81218491F96D41600C52B99 /* CityNameViewController.swift in Sources */,
+				D812184B1F96D45800C52B99 /* WeatherViewController.swift in Sources */,
+				D81218441F96D3C700C52B99 /* ChinaAddress.swift in Sources */,
 				D81218131F96D29400C52B99 /* ChinaWeatherWithCoreData.xcdatamodeld in Sources */,
+				D812183F1F96D2FE00C52B99 /* WeatherClient.swift in Sources */,
 				D812180D1F96D29400C52B99 /* ViewController.swift in Sources */,
+				D81218471F96D3ED00C52B99 /* ProvinceNameViewController.swift in Sources */,
 				D812180B1F96D29400C52B99 /* AppDelegate.swift in Sources */,
+				D81218421F96D3AF00C52B99 /* Province.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
