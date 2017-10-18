@@ -77,6 +77,8 @@
 
 /* Begin PBXFileReference section */
 		D8089C521F9745DE0072FE86 /* SearchedProvinceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchedProvinceViewController.swift; sourceTree = "<group>"; };
+		D8089C5C1F980C1D0072FE86 /* ChinaWeatherWithCoreData3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChinaWeatherWithCoreData3.xcdatamodel; sourceTree = "<group>"; };
+		D8089C5D1F9810F80072FE86 /* ChinaWeatherWithCoreData4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChinaWeatherWithCoreData4.xcdatamodel; sourceTree = "<group>"; };
 		D81218071F96D29400C52B99 /* ChinaWeatherWithCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChinaWeatherWithCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D812180A1F96D29400C52B99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D812180F1F96D29400C52B99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -746,9 +748,11 @@
 		D81218111F96D29400C52B99 /* ChinaWeatherWithCoreData.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				D8089C5D1F9810F80072FE86 /* ChinaWeatherWithCoreData4.xcdatamodel */,
+				D8089C5C1F980C1D0072FE86 /* ChinaWeatherWithCoreData3.xcdatamodel */,
 				D81218121F96D29400C52B99 /* ChinaWeatherWithCoreData.xcdatamodel */,
 			);
-			currentVersion = D81218121F96D29400C52B99 /* ChinaWeatherWithCoreData.xcdatamodel */;
+			currentVersion = D8089C5D1F9810F80072FE86 /* ChinaWeatherWithCoreData4.xcdatamodel */;
 			path = ChinaWeatherWithCoreData.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

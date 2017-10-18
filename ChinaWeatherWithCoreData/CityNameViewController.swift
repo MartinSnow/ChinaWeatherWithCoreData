@@ -17,6 +17,9 @@ class cityNameViewController: UIViewController, UITableViewDataSource, UITableVi
     let indicator = UIActivityIndicatorView()
     let specialCitites = ["北京","天津","上海","重庆","香港特别行政区","澳门特别行政区","台湾"]
     
+    // coredata context
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,7 +52,13 @@ class cityNameViewController: UIViewController, UITableViewDataSource, UITableVi
         let cell = tableView.cellForRow(at: indexPath)
         self.cityName = cell?.textLabel?.text
         
-        getCoordinator(provinceName: (province?.name)!, cityName: cityName!) {(lat, lon, error) in
+        // save cellName in coredata
+        let searchedItem = SearchedItem(context: context)
+        searchedItem.cityName = cell?.textLabel?.text
+        searchedItem.provinceName = province?.name
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        getCoordinator(provinceName: searchedItem.provinceName!, cityName: searchedItem.cityName!) {(lat, lon, error) in
             if error != nil {
                 print("There is no lat and lon")
             }

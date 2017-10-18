@@ -9,68 +9,73 @@
 import Foundation
 import UIKit
 
-class searchedProvinceViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class searchedProvinceViewController: cityNameViewController {
     
     // properties
-    var searchedProvinceArray: [SearchedProvince] = []
-    var searchedArray: [String] = []
+    var searchedItemArray: [SearchedItem] = []
+    var searchedCityArray: [String] = []
+    var searchedDic: [String: String] = [:]
     var chinaAddress: ChinaAddress?
-    
-    // coredata context
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         getData()
+        getCPDic()
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return searchedArray.count
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return searchedCityArray.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = searchedArray[indexPath.row]
+        cell.textLabel?.text = searchedCityArray[indexPath.row]
         return cell
         
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let cellName = tableView.cellForRow(at: indexPath)?.textLabel?.text
+        //start indicator
+        indicator.startAnimating()
         
-        // save cellName in coredata
-        let searchedProvince = SearchedProvince(context: context)
-        searchedProvince.name = cellName!
-        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        let cell = tableView.cellForRow(at: indexPath)
+        self.cityName = cell?.textLabel?.text
         
-        for item in (chinaAddress?.address)! {
-            let itemName = item["name"] as! String
-            if itemName == cellName {
-                let province = Province(dictionary: item)
-                let cityNameViewController = self.storyboard!.instantiateViewController(withIdentifier: "cityNameViewController") as! cityNameViewController
-                cityNameViewController.province = province
-                
-                self.navigationController?.pushViewController(cityNameViewController, animated: true)
-                break
+        getCoordinator(provinceName: searchedDic[cityName!]!, cityName: cityName!) {(lat, lon, error) in
+            if error != nil {
+                print("There is no lat and lon")
             }
+            self.getWeatherInformation(lat: lat!, lon: lon!)
         }
     }
     
     func getData() {
         do {
-            searchedProvinceArray = try context.fetch(SearchedProvince.fetchRequest())
+            searchedItemArray = try context.fetch(SearchedItem.fetchRequest())
         } catch {
             print("Fetching failed")
         }
         
-        for item in searchedProvinceArray {
-            if !searchedArray.contains(item.name!) {
-                searchedArray.append(item.name!)
+        for item in searchedItemArray {
+            if !searchedCityArray.contains(item.cityName!) {
+                searchedCityArray.append(item.cityName!)
             }
         }
-        print(searchedArray)
+        print(searchedCityArray)
+    }
+    
+    func getCPDic() {
+        do {
+            searchedItemArray = try context.fetch(SearchedItem.fetchRequest())
+        } catch {
+            print("Fetching failed")
+        }
+        
+        for item in searchedItemArray {
+            searchedDic[item.cityName!] = item.provinceName
+        }
     }
 }

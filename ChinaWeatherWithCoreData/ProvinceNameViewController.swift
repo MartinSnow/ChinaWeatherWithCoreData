@@ -76,10 +76,6 @@ class provinceNameViewController: UIViewController, UITableViewDataSource, UITab
         
         let cellName = tableView.cellForRow(at: indexPath)?.textLabel?.text
         
-        // save cellName in coredata
-        let searchedProvince = SearchedProvince(context: context)
-        searchedProvince.name = cellName!
-        (UIApplication.shared.delegate as! AppDelegate).saveContext()
         
         for item in (chinaAddress?.address)! {
             let itemName = item["name"] as! String
