@@ -19,6 +19,10 @@ class provinceNameViewController: UIViewController, UITableViewDataSource, UITab
     var searchingDataArray: [String] = []
     var searching = false //This for search is on or not that identifier
     
+    
+    // coredata context
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     @IBOutlet var tableView: UITableView!
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -28,14 +32,6 @@ class provinceNameViewController: UIViewController, UITableViewDataSource, UITab
         
         searchBar.showsCancelButton = false
         
-        //I want to use this code to hide "x" symbol of searchBar, but it doesn't work.
-        /*for item in searchBar.subviews {
-         if item.isKind(of: UITextField.self) {
-         let searchTextField = item as! UITextField
-         searchTextField.clearButtonMode = .never
-         }
-         }*/
-        
         data = NSDictionary(contentsOf: Bundle.main.url(forResource: "address", withExtension: "plist")!)
         chinaAddress = ChinaAddress(dictionary: data as! [String : AnyObject])
         
@@ -43,6 +39,16 @@ class provinceNameViewController: UIViewController, UITableViewDataSource, UITab
             let province = item["name"] as! String
             originalArray.append(province)
         }
+        
+        
+    }
+
+    @IBAction func historyButton(_ sender: AnyObject) {
+        
+        print("tap button")
+        let searchedProvinceViewController = self.storyboard!.instantiateViewController(withIdentifier: "searchedProvinceViewController") as! searchedProvinceViewController
+        
+        self.navigationController?.pushViewController(searchedProvinceViewController, animated: true)
     }
     
     // UITableViewDataSource
@@ -68,6 +74,12 @@ class provinceNameViewController: UIViewController, UITableViewDataSource, UITab
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let cellName = tableView.cellForRow(at: indexPath)?.textLabel?.text
+        
+        // save cellName in coredata
+        let searchedProvince = SearchedProvince(context: context)
+        searchedProvince.name = cellName!
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
         for item in (chinaAddress?.address)! {
             let itemName = item["name"] as! String
             if itemName == cellName {
@@ -120,15 +132,6 @@ extension provinceNameViewController: UISearchBarDelegate {
         searching = false
         searchBar.endEditing(true)
         searchBar.showsCancelButton = false // Hide cancel button when click it
-        
-        // This two lines below will hide the searchBar cross ("x")
-        /*
-         guard let firstSubview = searchBar.subviews.first else { return }
-         
-         firstSubview.subviews.forEach {
-         ($0 as? UITextField)?.clearButtonMode = .never
-         }
-         */
     }
     
     // When you click on search
@@ -138,3 +141,4 @@ extension provinceNameViewController: UISearchBarDelegate {
         searchBar.showsCancelButton = false // Hide cancel button when click search button
     }
 }
+

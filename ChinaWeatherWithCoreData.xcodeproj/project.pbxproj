@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D8089C531F9745DE0072FE86 /* SearchedProvinceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8089C521F9745DE0072FE86 /* SearchedProvinceViewController.swift */; };
 		D812180B1F96D29400C52B99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D812180A1F96D29400C52B99 /* AppDelegate.swift */; };
 		D812180D1F96D29400C52B99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D812180C1F96D29400C52B99 /* ViewController.swift */; };
 		D81218101F96D29400C52B99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D812180E1F96D29400C52B99 /* Main.storyboard */; };
@@ -76,6 +77,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D8089C521F9745DE0072FE86 /* SearchedProvinceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchedProvinceViewController.swift; sourceTree = "<group>"; };
 		D81218071F96D29400C52B99 /* ChinaWeatherWithCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChinaWeatherWithCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D812180A1F96D29400C52B99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D812180C1F96D29400C52B99 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 				D81218461F96D3ED00C52B99 /* ProvinceNameViewController.swift */,
 				D81218481F96D41600C52B99 /* CityNameViewController.swift */,
 				D812184A1F96D45800C52B99 /* WeatherViewController.swift */,
+				D8089C521F9745DE0072FE86 /* SearchedProvinceViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				D81218491F96D41600C52B99 /* CityNameViewController.swift in Sources */,
 				D812184B1F96D45800C52B99 /* WeatherViewController.swift in Sources */,
 				D81218441F96D3C700C52B99 /* ChinaAddress.swift in Sources */,
+				D8089C531F9745DE0072FE86 /* SearchedProvinceViewController.swift in Sources */,
 				D81218131F96D29400C52B99 /* ChinaWeatherWithCoreData.xcdatamodeld in Sources */,
 				D812183F1F96D2FE00C52B99 /* WeatherClient.swift in Sources */,
 				D812180D1F96D29400C52B99 /* ViewController.swift in Sources */,
@@ -712,6 +716,7 @@
 				D81218341F96D29400C52B99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D81218351F96D29400C52B99 /* Build configuration list for PBXNativeTarget "ChinaWeatherWithCoreDataTests" */ = {
 			isa = XCConfigurationList;
@@ -720,6 +725,7 @@
 				D81218371F96D29400C52B99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D81218381F96D29400C52B99 /* Build configuration list for PBXNativeTarget "ChinaWeatherWithCoreDataUITests" */ = {
 			isa = XCConfigurationList;
@@ -728,6 +734,7 @@
 				D812183A1F96D29400C52B99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
