@@ -21,11 +21,6 @@ class weatherViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = cityName
-        
-        let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
-        tableView.backgroundView = activityIndicatorView
-        self.activityIndicatorView = activityIndicatorView
-        activityIndicatorView.startAnimating()
     }
     
     
@@ -42,7 +37,6 @@ class weatherViewController: UIViewController, UITableViewDataSource, UITableVie
         let tempDic = weatherInfo?["main"] as? [String: AnyObject]
         let temp = tempDic?["temp"] as! Double
         cell.textLabel?.text = "\(temp)℃"
-        activityIndicatorView.stopAnimating()
         return cell
     }
 }

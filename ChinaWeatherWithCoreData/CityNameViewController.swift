@@ -14,11 +14,17 @@ class cityNameViewController: UIViewController, UITableViewDataSource, UITableVi
     var province: Province?
     var weatherList: [[String:AnyObject]]?
     var cityName: String?
-    //var coordinator: [Float]?
+    let indicator = UIActivityIndicatorView()
     let specialCitites = ["北京","天津","上海","重庆","香港特别行政区","澳门特别行政区","台湾"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //add an activity indicator
+        view.addSubview(indicator)
+        indicator.center = view.center
+        indicator.hidesWhenStopped = true
+        indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
     }
     
     // UITableViewDataSource
@@ -36,6 +42,10 @@ class cityNameViewController: UIViewController, UITableViewDataSource, UITableVi
     
     // UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        //start indicator
+        indicator.startAnimating()
+        
         let cell = tableView.cellForRow(at: indexPath)
         self.cityName = cell?.textLabel?.text
         
@@ -138,6 +148,9 @@ extension cityNameViewController {
                 if let list = weatherData!["list"] as? [[String: AnyObject]] {
                     self.weatherList = list
                 }
+                
+                //stop indicator
+                self.indicator.stopAnimating()
                 
                 let weatherViewController = self.storyboard?.instantiateViewController(withIdentifier: "weatherViewController") as! weatherViewController
                 weatherViewController.cityName = self.cityName
