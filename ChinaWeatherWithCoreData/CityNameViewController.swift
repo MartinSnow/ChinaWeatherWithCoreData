@@ -73,6 +73,7 @@ class cityNameViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         
         getCoordinator(provinceName: provinceName!, cityName: cityName!) {(lat, lon, error) in
+            self.indicator.stopAnimating()
             if error != nil {
                 print("There is no lat and lon")
             }
@@ -157,6 +158,8 @@ extension cityNameViewController {
 extension cityNameViewController {
     
     func getWeatherInformation(lat: Double, lon: Double){
+        
+        self.indicator.startAnimating()
         
         WeatherClient.sharedInstance.getWeatherData(lat: lat, lon: lon){ (weatherData, error) in
             
