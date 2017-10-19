@@ -85,13 +85,7 @@ class searchedProvinceViewController: UIViewController, UITableViewDataSource, U
         } catch {
             print("Fetching failed")
         }
-        
-        /*for item in searchedItemArray {
-            if !searchedCityArray.contains(item.cityName!) {
-                searchedCityArray.append(item.cityName!)
-            }
-        }
-        print(searchedCityArray)*/
+        print("searchedItemArray is \(searchedItemArray)")
     }
     
     func getCPDic() {

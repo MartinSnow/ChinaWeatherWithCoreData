@@ -14,6 +14,8 @@ class cityNameViewController: UIViewController, UITableViewDataSource, UITableVi
     var province: Province?
     var weatherList: [[String:AnyObject]]?
     var cityName: String?
+    var searchedItemArray: [SearchedItem] = []
+    var searchedCity: [String] = []
     let indicator = UIActivityIndicatorView()
     let specialCitites = ["北京","天津","上海","重庆","香港特别行政区","澳门特别行政区","台湾"]
     
@@ -28,6 +30,8 @@ class cityNameViewController: UIViewController, UITableViewDataSource, UITableVi
         indicator.center = view.center
         indicator.hidesWhenStopped = true
         indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        
+        getSearchedCity()
     }
     
     // UITableViewDataSource
@@ -52,20 +56,28 @@ class cityNameViewController: UIViewController, UITableViewDataSource, UITableVi
         let cell = tableView.cellForRow(at: indexPath)
         self.cityName = cell?.textLabel?.text
         
-        // save cellName in coredata
         let searchedItem = SearchedItem(context: context)
-        searchedItem.cityName = cell?.textLabel?.text
-        searchedItem.provinceName = province?.name
-        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        let cityName = cell?.textLabel?.text
+        let provinceName = province?.name
         
-        getCoordinator(provinceName: searchedItem.provinceName!, cityName: searchedItem.cityName!) {(lat, lon, error) in
+        print("searchedCity is \(searchedCity)")
+        print("cityName is \(cityName!)")
+        print(!searchedCity.contains(cityName!))
+        
+        if !searchedCity.contains(cityName!) {
+            // save cellName in coredata
+            searchedItem.cityName = cityName
+            searchedItem.provinceName = provinceName
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            print("save")
+        }
+        
+        getCoordinator(provinceName: provinceName!, cityName: cityName!) {(lat, lon, error) in
             if error != nil {
                 print("There is no lat and lon")
             }
             self.getWeatherInformation(lat: lat!, lon: lon!)
         }
-        
-        
     }
 }
 
@@ -175,6 +187,18 @@ extension cityNameViewController {
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.destructive, handler: nil)
         alert.addAction(cancelAction)
         present(alert, animated: true, completion: nil)
+    }
+    
+    func getSearchedCity() {
+        do {
+            searchedItemArray = try context.fetch(SearchedItem.fetchRequest())
+        } catch {
+            print("Fetching failed")
+        }
+        
+        for item in searchedItemArray {
+            searchedCity.append(item.cityName!)
+        }
     }
     
 }
