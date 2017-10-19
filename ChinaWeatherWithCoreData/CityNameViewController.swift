@@ -56,7 +56,6 @@ class cityNameViewController: UIViewController, UITableViewDataSource, UITableVi
         let cell = tableView.cellForRow(at: indexPath)
         self.cityName = cell?.textLabel?.text
         
-        let searchedItem = SearchedItem(context: context)
         let cityName = cell?.textLabel?.text
         let provinceName = province?.name
         
@@ -65,6 +64,7 @@ class cityNameViewController: UIViewController, UITableViewDataSource, UITableVi
         print(!searchedCity.contains(cityName!))
         
         if !searchedCity.contains(cityName!) {
+            let searchedItem = SearchedItem(context: context)
             // save cellName in coredata
             searchedItem.cityName = cityName
             searchedItem.provinceName = provinceName
