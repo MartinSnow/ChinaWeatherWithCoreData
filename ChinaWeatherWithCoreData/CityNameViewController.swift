@@ -162,6 +162,7 @@ extension cityNameViewController {
             
             if error != nil {
                 self.alert(message: "Can't get weather data")
+                self.indicator.stopAnimating() // It takes too much to hide activity indicator
                 return
             }
             DispatchQueue.main.async{

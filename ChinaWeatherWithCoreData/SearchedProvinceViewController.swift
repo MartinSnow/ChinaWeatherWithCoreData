@@ -56,8 +56,8 @@ class searchedProvinceViewController: UIViewController, UITableViewDataSource, U
         indicator.startAnimating()
         
         let cell = tableView.cellForRow(at: indexPath)
-        self.cityName = cell?.textLabel?.text
-        print(self.cityName)
+        cityName = cell?.textLabel?.text
+        print(cityName)
         
         getCoordinator(provinceName: searchedDic[cityName!]!, cityName: cityName!) {(lat, lon, error) in
             if error != nil {

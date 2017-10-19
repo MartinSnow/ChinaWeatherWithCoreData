@@ -85,9 +85,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ih1-lK-Oxy">
-                                <frame key="frameInset" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ih1-lK-Oxy">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="eAR-AG-fhF">
@@ -106,6 +104,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ih1-lK-Oxy" firstAttribute="leading" secondItem="88v-zf-bA6" secondAttribute="leading" id="H6P-sY-LSL"/>
+                            <constraint firstAttribute="trailing" secondItem="Ih1-lK-Oxy" secondAttribute="trailing" id="Ixv-VK-ept"/>
+                            <constraint firstItem="Jj5-aG-z4t" firstAttribute="top" secondItem="Ih1-lK-Oxy" secondAttribute="bottom" id="UHy-kl-va3"/>
+                            <constraint firstItem="Ih1-lK-Oxy" firstAttribute="top" secondItem="88v-zf-bA6" secondAttribute="top" id="zOE-cT-JxS"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ltx-rb-JQy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -124,9 +128,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aPB-eK-hci">
-                                <frame key="frameInset" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aPB-eK-hci">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cityCell" id="sTJ-sn-bVU">
@@ -145,6 +147,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aPB-eK-hci" firstAttribute="top" secondItem="8hk-J9-lW2" secondAttribute="top" id="RA0-VP-whl"/>
+                            <constraint firstAttribute="trailing" secondItem="aPB-eK-hci" secondAttribute="trailing" id="cFf-Te-uSn"/>
+                            <constraint firstItem="aPB-eK-hci" firstAttribute="leading" secondItem="8hk-J9-lW2" secondAttribute="leading" id="dup-YX-5Th"/>
+                            <constraint firstItem="ig2-3k-bu8" firstAttribute="top" secondItem="aPB-eK-hci" secondAttribute="bottom" id="vkC-YD-vdW"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="org-qi-IPa" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -18,11 +18,6 @@ class WeatherClient: NSObject {
         let request = NSMutableURLRequest(url: URL(string: "http://api.openweathermap.org/data/2.5/forecast?lat=\(lat)&lon=\(lon)&appid=fd9e214e9d86b16132947c62af0cbacb&units=metric")!)
         let session = URLSession.shared
         let task = session.dataTask(with: request as URLRequest) { data, response, error in
-            /*
-            if error != nil { // Handle error...
-                print(error)
-                return
-            }*/
             
             self.convertDataWithCompletionHandler(data, completionHandlerForConvertData: completionHandlerForPublicUserData)
         }
